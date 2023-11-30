@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db_order:
+    container_name: db_order
+    ports: 
+    - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=mydatabase
+    image: postgres:11.22-alpine
+    volumes:
+      - ./data:/var/lib/postgresql/data
