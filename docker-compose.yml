@@ -13,7 +13,7 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data
 
-  nats:
+  stan:
     image: nats-streaming:alpine
     ports:
       - 4222:4222
