@@ -24,9 +24,9 @@ func Stan() {
 	clusterID := config.Stan.ClusterID
 	clientID := config.Stan.ClientID
 
-	orders := pkg.ReadOrdersFromDirectory("/home/user/Desktop/WBTECH/NATS-OrderStream-Service/json")
+	orders := pkg.ReadOrdersFromDirectory("/home/user/Desktop/WBTECH/NATS-OrderStream-Service/files")
 
-	conn := postgres.ConnectToDB(&config)
+	conn := postgres.ConnectToDB(&config)fi
 	defer conn.Close(context.Background())
 
 	sc := ConnectToStan(clusterID, clientID)
