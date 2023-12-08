@@ -1,9 +1,9 @@
 <h1 align="center">NATS-orderStream-service</h1>
 
 <p align="center">
-  <img alt="Golang" src="https://img.shields.io/badge/Golang-74.6 %25-blue?style=for-the-badge&logo=appveyor">
-  <img alt="HTML" src="https://img.shields.io/badge/HTML-14.3 %25-red?style=for-the-badge&logo=appveyor">
-  <img alt="Makefile" src="https://img.shields.io/badge/Makefile-11.1 %25-green?style=for-the-badge&logo=appveyor">
+  <img alt="Golang" src="https://img.shields.io/badge/Golang-74.6%25-blue.svg?style=for-the-badge&logo=Go&logoColor=white">
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-14.3%25-red.svg?style=for-the-badge&logo=HTML5&logoColor=white">
+  <img alt="Makefile" src="https://img.shields.io/badge/Makefile-11.1%25-green.svg?style=for-the-badge&logo=GNU-Make&logoColor=white">
 </p>
 
 ## Description
