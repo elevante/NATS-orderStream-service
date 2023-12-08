@@ -1,9 +1,9 @@
 <h1 align="center">NATS-orderStream-service</h1>
 
 <p align="center">
-  <img alt="Golang" src="https://img.shields.io/badge/Golang-74.6%25-blue.svg?style=for-the-badge&logo=Go&logoColor=white">
-  <img alt="HTML" src="https://img.shields.io/badge/HTML-14.3%25-red.svg?style=for-the-badge&logo=HTML5&logoColor=white">
-  <img alt="Makefile" src="https://img.shields.io/badge/Makefile-11.1%25-green.svg?style=for-the-badge&logo=GNU-Make&logoColor=white">
+  <a href="https://golang.org/"><img alt="Golang" src="https://badgen.net/badge/language/Golang/blue"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML" src="https://badgen.net/badge/language/HTML/red"></a>
+  <a href="https://www.gnu.org/software/make/manual/make.html"><img alt="Makefile" src="https://badgen.net/badge/tool/Makefile/green"></a>
 </p>
 
 ## Description
