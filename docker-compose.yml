@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres
+    ports: 
+    - "5432:5432"
+    environment:
+      - POSTGRES_DB=orderDB
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=root
+    image: postgres:11.22-alpine
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+  stan:
+    image: nats-streaming:alpine
+    ports:
+      - 4222:4222
+      - 8222:8222
+  memcached:
+    image: memcached
+    ports:
+      - "11211:11211"
