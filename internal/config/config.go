@@ -30,7 +30,7 @@ type AppConfig struct {
 func GetConfig() (AppConfig, error) {
 	var config AppConfig
 
-	file, err := os.ReadFile("/home/user/Desktop/WBTECH/NATS-OrderStream-Service/config.yaml")
+	file, err := os.ReadFile(".././config.yaml")
 
 	if err != nil {
 		return config, err

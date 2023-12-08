@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"service/internal/cache"
 	"service/internal/config"
 	"service/internal/model"
 	"service/pkg"
@@ -12,8 +13,6 @@ import (
 
 	"github.com/nats-io/stan.go"
 )
-
-var Cache = make(map[int]model.Order)
 
 func Stan() {
 	config, err := config.GetConfig()
@@ -24,9 +23,9 @@ func Stan() {
 	clusterID := config.Stan.ClusterID
 	clientID := config.Stan.ClientID
 
-	orders := pkg.ReadOrdersFromDirectory("/home/user/Desktop/WBTECH/NATS-OrderStream-Service/files")
+	orders := pkg.ReadOrdersFromDirectory(".././files")
 
-	conn := postgres.ConnectToDB(&config)fi
+	conn := postgres.ConnectToDB(&config)
 	defer conn.Close(context.Background())
 
 	sc := ConnectToStan(clusterID, clientID)
@@ -35,13 +34,15 @@ func Stan() {
 	for _, order := range orders {
 		postgres.InsertOrderToDB(conn, &order)
 
-		Cache[order.ID] = order
-		fmt.Println(Cache)
+		err := cache.SaveToCache(&order)
+		if err != nil {
+			log.Println(err)
+		}
 
 		PublishOrder(sc, &order)
-
-		SubscribeToOrder(sc)
 	}
+
+	SubscribeToOrder(sc)
 }
 
 func ConnectToStan(clusterID, clientID string) stan.Conn {
