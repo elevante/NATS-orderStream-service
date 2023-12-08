@@ -18,3 +18,7 @@ services:
     ports:
       - 4222:4222
       - 8222:8222
+  memcached:
+    image: memcached
+    ports:
+      - "11211:11211"
