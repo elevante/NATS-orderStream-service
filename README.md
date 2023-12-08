@@ -26,7 +26,7 @@ make run
 
 # Stopping Docker containers
 docker-compose down
-
+```
 
 ## Usage
 After launching the service, you can get order data using its id. Just go to the following URL in your browser:
