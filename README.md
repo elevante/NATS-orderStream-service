@@ -32,6 +32,6 @@ docker-compose down
 After launching the service, you can get order data using its id. Just go to the following URL in your browser:
 
 ```
-http://localhost:8080/orders/{id}
+http://localhost:8080/order?id={id}
 ```
 where `{id}` is the order id.
