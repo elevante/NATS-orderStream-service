@@ -17,7 +17,7 @@ The project uses Docker and Makefile to simplify the installation and launch pro
 make build
 
 # Launching Docker containers
-docker-compose up
+make up
 
 # After launching Docker Compose, manually run 'model.sql' to create the necessary tables
 
