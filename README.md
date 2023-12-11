@@ -25,7 +25,7 @@ make up
 make run
 
 # Stopping Docker containers
-docker-compose down
+make down
 ```
 
 ## Usage
